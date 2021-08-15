@@ -1,3 +1,65 @@
 :root {
-    font-family: 'Adamina', serif;
+    font-family: 'Archivo Black', sans-serif;
+}
+body {
+    font-size: 16px;
+    line-height: 1;
+}
+
+textarea {
+    background: transparent;
+    border: solid black;
+    resize: none;
+    color: black;
+    padding: 10px;
+}
+
+.jumbotron {
+ text-align: center;
+ background-color: transparent;
+ color: black;
+ border-radius: 0;
+ border-bottom: 10px solid black;   
+}
+ 
+.time-box {
+    text-align: center;
+    border-radius: 15px;
+}
+
+.row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;
+}
+
+.current {
+    background-color: white;
+    color: black;
+    border-top: 1px solid black;
+}
+
+.present {
+    background-color: #fc5e66;
+}
+
+.past {
+    background-color: #585858;
+    color: white;
+}
+
+.future {
+    background-color: #59a559;
+}
+
+.save-btn {
+    background-color: #07c2ee;
+    color: white;
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 20px;
+}
+#clear-planner {
+    background-color: red;
+    color: black;
 }
