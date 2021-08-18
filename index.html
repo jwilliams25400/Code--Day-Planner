@@ -1,100 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Day Planner</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Day Planner</title>
+  </head>
+  <body>
     <header class="jumbotron jumbotron-fluid custom-jumbotron">
-        <div class="container text-center">
-            <h1 class="display-3">Work Day Scheduler</h1>
-            <h3 class="lead">A simple calender app to keep you on track of your work day</h3>
-            <h2 id="today" class="lead">00:00:00</h2>
-       </div>
+      <div class="container text-center">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <h3 class="lead">
+          A simple calender app to keep you on track of your work day
+        </h3>
+        <h2 id="today" class="lead">00:00:00</h2>
+      </div>
     </header>
 
     <div id="time-boxes" class="container">
-        <div class="row num9 time-box">
-            <div class="current hour9 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                9:00 am
-            </div>
-            <textarea id="comment-area9 " class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save9">Save</button>
+      <div class="row num9 time-box">
+        <div class="current hour9 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          9:00 am
         </div>
-        <div class="row num10 time-box">
-            <div class="current hour10 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-               10:00 am
-            </div>
-            <textarea id="comment-area10" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save10">Save</button>
+        <textarea
+          id="area9"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          Save
+        </button>
+      </div>
+      <div class="row num10 time-box">
+        <div class="current hour10 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          10:00 am
         </div>
-        <div class="row num11 time-box">
-            <div class="current hour11 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                11:00 am
-            </div>
-            <textarea id="comment-area11" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save11">Save</button>
+        <textarea
+          id="area10"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button
+          class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1"
+          id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num11 time-box">
+        <div class="current hour11 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          11:00 am
         </div>
-        <div class="row num12 time-box">
-            <div class="current hour12 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                12:00 pm
-            </div>
-            <textarea id="comment-area12" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save12">Save</button>
-        </div><div class="row num1 time-box">
-            <div class="current hour1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                1:00 pm
-            </div>
-            <textarea id="comment-area1" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save1">Save</button>
+        <textarea
+          id="area11"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button
+          class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1"
+          id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num12 time-box">
+        <div class="current hour12 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          12:00 pm
         </div>
-        <div class="row num 2 time-box">
-            <div class="current hour2 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                2:00 pm
-            </div>
-            <textarea id="comment-area2" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save2">Save</button>
+        <textarea
+          id="area12"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button
+          class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1"
+          id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num1 time-box">
+        <div class="current hour1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          1:00 pm
         </div>
-        <div class="row num 3 time-box">
-            <div class="current hour3 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                3:00 pm
-            </div>
-            <textarea id="comment-area3" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save3">Save</button>
+        <textarea
+          id="area1"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num 2 time-box">
+        <div class="current hour2 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          2:00 pm
         </div>
-        <div class="row num4 time-box">
-            <div class="current hour4 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                4:00 pm
-            </div>
-            <textarea id="comment-area4" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save4">Save</button>
+        <textarea
+          id="area2"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num 3 time-box">
+        <div class="current hour3 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          3:00 pm
         </div>
-        <div class="row num5 time-box">
-            <div class="current hour5 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                5:00 pm
-            </div>
-            <textarea id="comment-area5" class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8" rows="2"></textarea>
-            <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id= "save5">Save</button>
+        <textarea
+          id="area3"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num4 time-box">
+        <div class="current hour4 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          4:00 pm
         </div>
+        <textarea
+          id="area4"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id="save">
+          Save
+        </button>
+      </div>
+      <div class="row num5 time-box">
+        <div class="current hour5 col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          5:00 pm
+        </div>
+        <textarea
+          id="area5"
+          class="comment col-xs-8 col-sm-8 col-md-8 col-lg-8"
+          rows="2"
+        ></textarea>
+        <button class="save-btn col-xs-1 col-sm-1 col-md-1 col-lg-1" id="save">
+          Save
+        </button>
+      </div>
     </div>
     <footer class="text-center">
-        <button id="clear-planner">Clear Planner</button>
+      <button id="clear-planner">Clear Planner</button>
     </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="assets/script/script.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="assets/script/script.js"></script>
+  </body>
 </html>
