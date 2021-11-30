@@ -15,5 +15,7 @@
 #### User Input field
 #### save button
 
+![](assets/images/workDayScheduler.jpg)
+
 # Websire URL
 ####  https://jwilliams25400.github.io/Code-Day-Planner/git
